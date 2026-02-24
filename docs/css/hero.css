@@ -1,0 +1,33 @@
+@import url(style.css);
+
+.hero {
+    display: grid;
+    grid-template-areas: "hero";
+    place-items: center;
+    max-height: 60vh;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.hero>* {
+    grid-area: hero;
+}
+
+.hero-content h1 {
+    font-size: var(--step-7);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+}
+
+.hero-content h2 {
+    font-size: var(--step-4);
+}
+
+.hero-image {
+    max-height: 60vh;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+}

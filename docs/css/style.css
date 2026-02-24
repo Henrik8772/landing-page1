@@ -1,0 +1,197 @@
+:root {
+    /* Relativa storlekar för tyografik och avstånd, skapade med https://utopia.fyi */
+    /* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+    --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+    /* @link https://utopia.fyi/space/calculator?c=360,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8494rem + 0.1136vw, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.6108rem + 0.3409vw, 1.875rem);
+    --space-l: clamp(2.25rem, 2.1477rem + 0.4545vw, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.2216rem + 0.6818vw, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.2955rem + 0.9091vw, 5rem);
+    --space-3xl: clamp(6.75rem, 6.4432rem + 1.3636vw, 7.5rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.3125rem, 0.1847rem + 0.5682vw, 0.625rem);
+    --space-2xs-xs: clamp(0.5625rem, 0.4091rem + 0.6818vw, 0.9375rem);
+    --space-xs-s: clamp(0.875rem, 0.7216rem + 0.6818vw, 1.25rem);
+    --space-s-m: clamp(1.125rem, 0.8182rem + 1.3636vw, 1.875rem);
+    --space-m-l: clamp(1.6875rem, 1.3551rem + 1.4773vw, 2.5rem);
+    --space-l-xl: clamp(2.25rem, 1.6364rem + 2.7273vw, 3.75rem);
+    --space-xl-2xl: clamp(3.375rem, 2.7102rem + 2.9545vw, 5rem);
+    --space-2xl-3xl: clamp(4.5rem, 3.2727rem + 5.4545vw, 7.5rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
+
+    /* Container */
+    --container-width: 75rem;
+
+    /* Variabler för färger */
+    --primary-color: #2E1A2B;
+    --secondary-primary-color: #6B2C3E;
+    --secondary-color: #2B2B2E;
+    --second-secondary-color: #4A2040;
+    --color-dark: #9F6BA0;
+    --color-pink: #C880B7;
+    --color-light: #F5CCE8;
+
+    /* Variabler för typografi */
+    --type-heading: "Playfair Display", serif;
+    --type-body: "Cormorant Garamond", serif;
+    --line-height-body: 1.6;
+    --line-height-heading: 1.1;
+
+    /* Avstånd för innehåll */
+    --gutter: var(--space-m);
+    --wrapper-max-width: 200rem;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+/* Grundläggande stilar för body och rubriker */
+body {
+    font-family: var(--type-body);
+    color: var(--color-light);
+    background-color: var(--second-secondary-color);
+    line-height: var(--line-height-body);
+    font-size: var(--step-1);
+}
+
+.site-head {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    font-size: var(--step-2);
+    text-transform: uppercase;
+    font-weight: 600;
+
+    color: var(--color-light);
+    background-color: var(--primary-color);
+    border-top: 6px solid var(--color-pink);
+    border-bottom: 6px solid var(--color-pink);
+
+    padding: 1rem;
+}
+
+
+.logo-text {
+    display: flex;
+    font-family: 'Tahu!', sans-serif;
+    color: #8E1567;
+    font-size: 32px;
+    /* Adjust to your preference */
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    /* Makes the font look smoother where i learnt it: https://tailwindcss.com/docs/font-smoothing*/
+    text-decoration: none;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+
+    padding: 16px;
+    margin: 1rem;
+}
+
+.light {
+    color: var(--color-light);
+    fill: var(--color-light);
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--wrapper-max-width, 60ch);
+}
+
+.container {
+    width: min(100vw - 3rem, var(--container-width));
+    margin-inline: auto;
+}
+
+.region {
+    padding-top: var(--region-space, var(--space-xl-2xl));
+    padding-bottom: var(--region-space, var(--space-xl-2xl));
+}
+
+.flow>*+* {
+    margin-top: var(--flow-space, 1em);
+}
+
+img {
+    max-width: 100%;
+}
+
+svg {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    font-size: var(--step-2);
+    text-transform: uppercase;
+    font-weight: 600;
+
+    color: var(--color-light);
+    background-color: var(--primary-color);
+    border-top: 6px solid var(--color-pink);
+    border-bottom: 6px solid var(--color-pink);
+
+    padding: 1rem;
+}
+
+.nav-list-foot {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+
+    padding: 16px;
+    margin: 1rem;
+}
+
+.nav-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+}
