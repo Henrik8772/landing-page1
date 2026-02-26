@@ -240,6 +240,10 @@ svg {
     padding-top: 20rem;
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-light);
+}
 
 .box p {
     margin-top: 3rem;
