@@ -259,11 +259,20 @@ svg {
 }
 
 h1 {
-    padding-top: 7rem;
+    margin: 0;
     text-align: center;
 }
 
 h3 {
     padding-top: 1rem;
     text-align: center;
+}
+
+.h-bg {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    margin-top: 17rem;
+    border: transparent 1px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
 }
