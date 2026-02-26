@@ -37,6 +37,7 @@
 
     /* Container */
     --container-width: 75rem;
+    --foot-container-width: 95rem;
 
     /* Variabler för färger */
     --primary-color: #2E1A2B;
@@ -137,8 +138,22 @@ body {
     max-width: var(--wrapper-max-width, 60ch);
 }
 
+.wrapper2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--wrapper-max-width, 60ch);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .container {
     width: min(100vw - 3rem, var(--container-width));
+    margin-inline: auto;
+}
+
+.foot-container {
+    width: min(100vw - 3rem, var(--foot-container-width));
     margin-inline: auto;
 }
 
@@ -194,4 +209,61 @@ svg {
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
+}
+
+.site-footer p {
+    text-transform: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    font-size: var(--step-1);
+    font-weight: 400;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    background-color: var(--primary-color);
+    opacity: 1;
+    width: 15vw;
+    max-height: 100%;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+    border: transparent 1px;
+    border-radius: 25px;
+}
+
+.pad-top {
+    padding-top: 20rem;
+}
+
+
+.box p {
+    margin-top: 3rem;
+    font-size: var(--step-2);
+    font-weight: 500;
+}
+
+.shop {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.box-bg {
+    background-color: var(--primary-color);
+    border: transparent 1px;
+    border-radius: 25px;
+}
+
+h1 {
+    padding-top: 7rem;
+    text-align: center;
+}
+
+h3 {
+    padding-top: 1rem;
+    text-align: center;
 }
