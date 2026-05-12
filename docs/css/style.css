@@ -92,12 +92,15 @@ body {
     padding: 1rem;
 }
 
+.brand {
+    max-width: 100%;
+}
 
 .logo-text {
     display: flex;
     font-family: 'Tahu!', sans-serif;
     color: #8E1567;
-    font-size: 32px;
+    font-size: 2rem;
     /* Adjust to your preference */
     text-align: center;
     -webkit-font-smoothing: antialiased;
@@ -213,9 +216,6 @@ body {
     margin-top: var(--flow-space, 1em);
 }
 
-img {
-    max-width: 100%;
-}
 
 svg {
     width: auto;
@@ -336,18 +336,33 @@ h3 {
 
 
 @media (max-width: 960px) {
+
     .nav-list {
         display: none;
     }
 }
 
 @media (min-width: 961px) {
+
     .mobil-menu {
         display: none;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .brand img {
+        max-width: 30%;
+    }
+
+    .brand {
+        max-width: 70%;
+        margin: 0;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
     .mobil-menu.responsive {
         position: relative;
     }
