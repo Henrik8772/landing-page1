@@ -36,7 +36,7 @@
     --space-s-l: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
 
     /* Container */
-    --container-width: 75rem;
+    --container-width: 78rem;
     --foot-container-width: 95rem;
 
     /* Variabler för färger */
@@ -188,14 +188,14 @@ body {
     max-width: var(--wrapper-max-width, 60ch);
 }
 
-.wrapper2 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--wrapper-max-width, 60ch);
+
+.space-fix {
     display: flex;
     justify-content: space-between;
 
 }
+
+
 
 .container {
     width: min(100vw - 3rem, var(--container-width));
@@ -246,7 +246,7 @@ svg {
     display: flex;
     gap: 3rem;
 
-    padding: 16px;
+    padding: 1rem;
     margin: 1rem;
 }
 
@@ -340,6 +340,7 @@ h3 {
     .nav-list {
         display: none;
     }
+
 }
 
 @media (min-width: 961px) {
@@ -361,6 +362,46 @@ h3 {
 
     .logo-text {
         font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+
+    .box {
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .space-fix {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .nav-list-foot {
+        gap: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    footer,
+    p {
+        margin-right: auto;
+        margin-left: auto;
+        justify-items: center;
     }
 
     .mobil-menu.responsive {
