@@ -63,6 +63,8 @@
 html,
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* Grundläggande stilar för body och rubriker */
@@ -115,9 +117,9 @@ body {
     justify-content: space-between;
     align-items: center;
 
-
     position: sticky;
     top: 0;
+    position: relative;
 }
 
 
@@ -126,7 +128,7 @@ body {
     display: flex;
     gap: 3rem;
 
-    padding: 16px;
+    padding: 1rem;
     margin: 1rem;
 }
 
@@ -159,7 +161,7 @@ body {
 
 
 .mobil-menu {
-    position: relative;
+    position: static;
     list-style: none;
     padding: 1rem;
 }
@@ -398,14 +400,20 @@ h3 {
     }
 
     footer,
-    p {
-        margin-right: auto;
-        margin-left: auto;
-        justify-items: center;
+    .footer-text {
+        text-align: center;
     }
 
     .mobil-menu.responsive {
         position: relative;
+    }
+
+    .mobil-menu {
+        position: static !important;
+    }
+
+    .site-head {
+        position: relative !important;
     }
 
     .mobil-menu.responsive .nav-mobil {
@@ -414,24 +422,31 @@ h3 {
         background-color: var(--primary-color);
 
         top: 100%;
-        right: 0;
+        right: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
         z-index: 1000;
-        width: 100vw;
 
         position: absolute;
 
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
         overflow: hidden;
+
     }
 
     .nav-mobil li:last-child a {
         border-bottom: none;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
 
 
     .mobil-menu.responsive .nav-mobil a {
-        display: block;
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
         text-align: left;
         border-top: 1px solid var(--color-pink);
     }
